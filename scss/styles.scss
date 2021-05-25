@@ -1,0 +1,628 @@
+@import "mediaQueries";
+@import "variables";
+@import "apariencia";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    font-family: $f-family-all;
+}
+
+/*Header*/
+
+header{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    background-color: $azul;
+    height: auto;
+    padding: 20px;
+    position: fixed;
+
+    .header_logo{
+        font-family: $f-family-titulos;
+        font-size: $font-logo;
+        color: $blanco;
+        justify-content: center;
+    }
+}
+
+nav{
+    font-size: $font-nav;
+    
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li{
+            display: inline-block;
+            margin: 0px 10px;
+
+            .nav-link{
+                color: $gris;
+                text-decoration: none;
+                position: relative;
+
+                &:hover{
+                    color: $blanco;
+                    transition: all .5s;
+                }
+            }
+        }
+    }
+}
+
+.navbar-toggler-icon{
+    color:$blanco;
+    font-size:20px;
+    justify-content: center;
+}
+
+/*Body Gral*/
+
+body{
+    background-image: url(../Imagenes/Fondo/sutil.png);
+    font-size: $font-body;
+    color: $negro;
+}
+
+/*Footer*/
+
+.footer__main{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot__style{
+    height: auto;
+    width: 100%;
+    padding: 20px 20px;
+    background-color: $azul;
+    text-align: center;
+    justify-content: center;
+    
+    .foot__text{
+        font-size: $font-footer;
+        color: $blanco;
+        word-spacing: 10px;     
+    }
+}
+
+.foot__redes{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+        
+    .icon-redes-footer{
+        font-size: $font-logo;
+        margin: 10px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        color: $gris;
+        text-decoration: none;
+    }
+}
+
+/* Página Inicio*/
+.main__section{
+    width: 100%;
+    height: 150vh;
+
+    .section__image{
+        display: flex;
+        background-image: url(../Imagenes/welcome.jpg);
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-attachment: fixed;
+    }
+}
+
+.section__body{
+    margin: auto;
+    display: block;
+    margin-top: 530px;
+    width: 960px;
+    padding: 15px;
+    height: auto;
+    text-align: center;
+    background-image: url(../Imagenes/Fondo/sutil.png);
+
+    .body__título1{
+        font-size: $font-welcome;
+        width: 100%;
+        color: $azultitulo;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        position: hidden;
+        margin-top: $margin-toppg;
+        font-family: $f-family-titulos;
+        animation: text 3s 1;
+
+        .body__text{
+            display: flex;
+            line-height: 1.6;
+            color: $negro;
+            justify-items: center;
+        }    
+    }
+}
+       
+.body__título2{
+    font-size: $font-logo;
+    font-family: $f-family-titulos;
+    color: $aqua;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;   
+}
+
+@keyframes text{
+    0%{
+        color: $rosado;
+        margin-bottom: 80px;
+    }
+    35%{
+        letter-spacing:25px;
+        margin-bottom: 80px
+    }
+    85%{
+        letter-spacing:8px;
+        margin-bottom: 80px
+    }
+
+}
+
+/*Página Nosotros*/
+.main__nos{
+    width: 100%;
+    height: 100vh;
+    padding: 80px;
+
+    .nos__título{
+        font-size: $font-title;
+        color: $aqua;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        position: hidden;
+        margin-top: $margin-toppg;
+        font-family: $f-family-titulos;
+    }
+}
+  
+.contenedor__Nos {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: static;
+  
+    .texto__Nos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 90%;
+        line-height: 1.6;
+        height: auto;
+        text-align: justify;
+    }
+}
+  
+#slide {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+
+    &:hover{
+        filter: saturate(1.5);
+    }
+}
+
+/*Página Servicios*/
+.main__serv{
+    width: 100%;
+    height: auto;
+    padding-top: 70px;
+    display: grid;
+
+    .serv__título{
+        font-size: $font-title;
+        color: $aqua;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        position: hidden;
+        margin-top: $margin-toppg;
+        font-family: $f-family-titulos;
+    }
+}
+
+.serv__containerTabla{
+    width: 90%;
+    height: 110vh;
+    margin: 50px auto;
+    background-color: $blanco;
+    border-style: double;
+    border-color: $gris;
+    box-shadow: 0 0 20px $negro;
+    
+    display:grid;
+    place-items: center;
+    align-items: flex-start;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+}
+
+.table-header-image, table-header, table-item{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.table-header{
+    color: $rosado;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: $font-body;
+    font-family: $f-family-titulos;
+}
+
+.table-item{
+    margin-top: 0;
+    font-size: $font-bodysmall;
+    padding: 15px;
+    text-align: justify;
+    line-height: 1.6;
+    position: top;
+
+    .viñeta{
+        list-style-image: url(../Imagenes/Icono/pawprint.png);
+        list-style-position: inside;
+        text-align: left;
+        line-height: 1.6;
+    }
+}
+
+.table-header-image{
+    margin-top: 20px;
+    min-width: 250px;
+    min-height: 250px;
+    border-radius: 5%;
+    filter: saturate(1.2);
+    position: hidden;
+}
+
+.image1{
+    background-image: url(../Imagenes/durmiendo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.image2{
+    background-image: url(../Imagenes/perros.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.image3{
+    background-image: url(../Imagenes/baño1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.image4{
+    background-image: url(../Imagenes/drive.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/*Página Q&A*/
+.main__QA{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: auto;
+    padding: 80px;
+
+    .QA__título{
+        font-size: $font-title;
+        color: $aqua;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: $margin-toppg;
+        font-family: $f-family-titulos;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+.contenedor__QA{
+    margin: auto;
+    height: auto;
+    line-height: 1.6;
+    margin-top: $margin-toppg;
+
+    .secc__preg{
+        display: inline-block;
+        padding: 10px;
+        margin-left: 30px;
+        
+        .preg__título{
+            color:$azultitulo;
+            font-weight: bold;
+            font-family: $f-family-titulos;
+            font-size: $font-nav;
+            line-height: 1.6;
+        }
+    }
+}
+
+.secc__contrato{
+    margin-top: $margin-toppg;
+    padding: 10%;
+    height: 100%; 
+    text-align: center;
+    background-color: $gris;
+    border-style: double;
+    border-color: $gris;
+    background-color: $blanco;
+
+    .contrato__título{
+        color:$rosado;
+        font-weight: bold;
+        font-family: $f-family-titulos;
+        font-size: $font-nav;
+        line-height: 1.6;
+    }
+}
+
+/*Página Testimonios*/
+.main__Test{
+    width: 100%;
+    height: auto;
+    padding: 70px;
+
+    .test__título{
+        font-size: $font-title;
+        color: $aqua;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        position: hidden;
+        margin-top: $margin-toppg;
+        font-family: $f-family-titulos;
+    }
+}
+
+.container__Test{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.test__cards{
+    width: 280px;
+    margin: 30px;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px $negro;
+    background-color: $gris;
+    font-size: 14px;
+        
+    .cards__título{
+        padding: 10px;
+        font-size: $font-body;
+        color: $rosado;
+        font-weight: bold;
+        position: relative;
+        font-family: $f-family-titulos;
+
+        .cards__body{
+            font-size: $font-bodysmall;
+            color: $negro;
+            
+        }
+    }
+}
+    
+
+.test__galería{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 25px;
+}
+
+.galeria__Contenedor{
+    width: 65%;
+    height: 60%;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px ;
+    grid-template-areas:"fotos7  fotos6  fotos4"
+                        "fotos5  fotos1  fotos4"
+                        "fotos5  fotos2  fotos3";
+
+    .forma__Imag-Card, .forma__Imag{
+        min-width: 180px;
+        min-height: 180px;
+        border-radius: 5%;     
+    
+        &:hover{
+        transform: scale(1.1);
+        transition: 0.7s;
+        filter: saturate(1.5);
+        }
+    }
+}
+
+.testimonio:hover{
+    transform: translateY(-15px);
+}
+
+.fotos1{
+    grid-area: "fotos1";
+    grid-column: 2;
+    grid-row: 2;
+    background-image: url(../Imagenes/foto1.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.fotos2{
+    grid-area: "fotos2";
+    grid-column: 2;
+    grid-row: 3;
+    background-image: url(../Imagenes/foto2.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.fotos3{
+    grid-area: "fotos3";
+    grid-column:3;
+    grid-row: 3;
+    background-image: url(../Imagenes/foto3.jpeg);
+    background-size:cover;
+    background-position: center;
+}
+.fotos4{
+    grid-area: "fotos4";
+    grid-column: 3;
+    grid-row: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-image: url(../Imagenes/foto4.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.fotos5{
+    grid-area: "fotos5";
+    grid-column:1;
+    grid-row: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-image: url(../Imagenes/foto5.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.fotos6{
+    grid-area: "fotos6";
+    grid-column:2;
+    grid-row: 1;
+    background-image: url(../Imagenes/foto6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.fotos7{
+    grid-area: "fotos7";
+    grid-column:1;
+    grid-row: 1;
+    background-image: url(../Imagenes/foto7.jpg);
+    background-size:cover;
+    background-position: center;
+}
+
+/*Página Contacto*/
+.main__contact{
+    width: 100%;
+    height: auto;
+    padding: 70px;
+    margin: auto;
+    
+
+    .contact__título{
+        color: $aqua;
+        text-align: center;
+        text-transform: uppercase;
+        position: relative;
+        margin-top: $margin-toppg;
+        height: 50px;
+        font-size: $font-title;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        font-family: $f-family-titulos;
+        font-weight: bold;
+        position: hidden;
+    }
+}
+
+
+.titulos__Contacto{
+    color: $rosado;
+    font-family: $f-family-titulos;
+    margin-top: $margin-toppg;
+    font-size: $font-nav;
+  
+    iframe{
+        margin-bottom: 30px;
+    }
+}
+
+.icono__correo{
+    list-style-image: url(../Imagenes/Icono/correo.png);
+    list-style-position: inside;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.icono__teléfono{
+    list-style-image: url(../Imagenes/Icono/llamada-telefonica.png);
+    list-style-position: inside;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.icono__ubicación{
+    list-style-image: url(../Imagenes/Icono/ubicacion.png);
+    list-style-position: inside;
+    text-align: left;
+    line-height: 1.6;
+}
+.icono__horario{
+    list-style-image: url(../Imagenes/Icono/paso-del-tiempo.png);
+    list-style-position: inside;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.main__form{
+    position: relative;
+    margin-top: $margin-toppg;
+    align-content: flex-end;
+}
+
+
+
+
+
+
+

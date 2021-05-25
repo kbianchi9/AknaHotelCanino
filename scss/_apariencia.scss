@@ -1,0 +1,40 @@
+/*Estilo Barra de Desplazamiento*/
+/*Chrome*/
+::-webkit-scrollbar-track
+{
+   box-shadow: outset 0 0 6px rgba(0,0,0,0.3);
+   background-color:white; 
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color:black;
+}
+
+::-webkit-scrollbar-track
+{
+    box-shadow: outset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    background-color:#a2a2a2; 
+}
+
+/*Mozilla*/
+::-moz-scrollbar-track
+{
+   box-shadow: outset 0 0 6px rgba(0,0,0,0.3);
+   background-color:white; 
+}
+
+::-moz-scrollbar
+{
+    width: 12px;
+    background-color:black;
+}
+
+::-moz-scrollbar-track
+{
+    box-shadow: outset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    background-color:#a2a2a2; 
+}
