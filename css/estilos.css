@@ -3,53 +3,92 @@
 @media only screen and (max-width: 575px) {
   .header_logo {
     font-size: 20px; }
+  /*Pag. Inicio*/
   .main__section {
     height: 100%;
     width: 100%; }
+    .main__section .section__image {
+      background-size: 150%; }
   .section__body {
     display: flex;
     place-items: center;
-    position: relative;
+    position: hidden;
     padding: 15px;
     text-align: center; }
-    .section__body .body__título1, .section__body .body__título2 {
-      font-size: 16px;
+    .section__body .body__título1 {
+      font-size: 18px;
       animation: none; }
-  .body__text, .texto__Nos {
+  .body__título2 {
+    font-size: 16px;
+    animation: none; }
+  .body__text {
     font-size: 14px; }
-  .contenedor__nos {
-    margin: auto;
-    width: auto;
-    padding: 15px;
-    height: 100vh;
-    position: hidden; }
-    .contenedor__nos .nos__título {
+  /*Pag. Nosotros*/
+  .main__nos {
+    height: 100%;
+    width: 150vh; }
+    .main__nos .nos__título {
       font-size: 16px; }
+  .contenedor__nos {
+    display: flex;
+    justify-content: center;
+    position: hidden; }
+  .texto__Nos {
+    font-size: 14px;
+    text-align: center; }
   #slide {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
     width: 100%;
     height: fit-content; }
-  .serv__containerTabla {
-    display: flex;
+  /*Pag. Servicios*/
+  .main__serv, .serv__containerTabla {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    font-size: 14px;
     place-items: center;
     height: auto;
-    position: relative;
+    position: hidden;
     flex-direction: column;
-    flex-wrap: wrap; }
+    width: 50%; }
+  .serv__título {
+    font-size: 16px; }
   .table-header-image {
     display: none; }
+  /*Pag. Q&A*/
   .contenedor__QA {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     font-size: 14px; }
-  .preg__Text, .font__Test, .titulos__Contacto {
+    .contenedor__QA .QA__título {
+      font-size: 16px; }
+  .secc__preg, .preg__título {
+    font-size: 14px; }
+  .secc__contrato {
+    width: 100%;
+    justify-content: center; }
+    .secc__contrato .contrato__título {
+      font-size: 16px; }
+      .secc__contrato .contrato__título p {
+        font-size: 14px; }
+  /*Pag. Testimonios*/
+  .test__título {
     font-size: 16px; }
-  .secc__Contrato {
-    width: 90%; }
-  iframe, .column {
-    width: 100%; }
-  .forma__Imag {
+  .container__Test {
+    align-content: center;
+    justify-content: center; }
+  .galeria__Contenedor {
+    width: 50%;
     grid-column: span 2;
     grid-row: span 2; }
+  /*Pag. Contacto*/
+  iframe, .column {
+    width: 100%; }
+  /*Footer*/
   .foot__style {
     display: flex;
     flex-direction: row;
@@ -69,9 +108,7 @@
       height: 15px;
       display: flex;
       justify-content: center;
-      align-items: center; }
-  .container__cont {
-    width: 90%; } }
+      align-items: center; } }
 
 /*Para dispositivos tipo tables y luego tamaño normal con pantallas más*/
 @media only screen and (min-width: 576px) and (max-width: 768px) {
@@ -143,10 +180,6 @@
     flex-wrap: wrap; } }
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
-  /* header{
-        height: auto;
-        position: relative;
-    } */
   .contenedor__Serv, .containerTabla {
     height: 80%;
     width: 80%; }
@@ -221,7 +254,8 @@ header {
     justify-content: center; }
 
 nav {
-  font-size: 18px; }
+  font-size: 18px;
+  position: fixed; }
   nav ul {
     list-style: none;
     margin: 0;
@@ -346,7 +380,7 @@ body {
 /*Página Nosotros*/
 .main__nos {
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   padding: 80px; }
   .main__nos .nos__título {
     font-size: 28px;
@@ -366,7 +400,7 @@ body {
   align-items: flex-end;
   justify-content: center;
   flex-wrap: wrap;
-  position: static; }
+  position: hidden; }
   .contenedor__Nos .texto__Nos {
     display: flex;
     flex-direction: row;
@@ -381,7 +415,8 @@ body {
   position: absolute;
   justify-content: center;
   align-content: center;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-bottom: 20px; }
   #slide:hover {
     filter: saturate(1.5); }
 
@@ -453,57 +488,62 @@ body {
 .image1 {
   background-image: url(../Imagenes/durmiendo.jpg);
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  display: hidden; }
 
 .image2 {
   background-image: url(../Imagenes/perros.jpg);
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  display: hidden; }
 
 .image3 {
   background-image: url(../Imagenes/baño1.jpg);
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  display: hidden; }
 
 .image4 {
   background-image: url(../Imagenes/drive.jpg);
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  display: hidden; }
 
 /*Página Q&A*/
 .main__QA {
   width: 100%;
   height: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-row: auto;
   padding: 80px; }
-  .main__QA .QA__título {
-    font-size: 28px;
-    color: #3F8F8B;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: 60px;
-    font-family: "Original Surfer", cursive;
-    grid-column-start: 1;
-    grid-column-end: 3; }
+  .main__QA .contenedor__QA {
+    margin: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: auto;
+    line-height: 1.6;
+    margin-top: 60px; }
 
-.contenedor__QA {
-  margin: auto;
-  height: auto;
-  line-height: 1.6;
+.QA__título {
+  font-size: 28px;
+  color: #3F8F8B;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Original Surfer", cursive;
+  grid-column-start: 1;
+  grid-column-end: 3; }
+
+.secc__preg {
+  display: inline-block;
+  padding: 10px;
+  margin-left: 30px;
   margin-top: 60px; }
-  .contenedor__QA .secc__preg {
-    display: inline-block;
-    padding: 10px;
-    margin-left: 30px; }
-    .contenedor__QA .secc__preg .preg__título {
-      color: #1C4481;
-      font-weight: bold;
-      font-family: "Original Surfer", cursive;
-      font-size: 18px;
-      line-height: 1.6; }
+  .secc__preg .preg__título {
+    color: #1C4481;
+    font-weight: bold;
+    font-family: "Original Surfer", cursive;
+    font-size: 18px;
+    line-height: 1.6; }
 
 .secc__contrato {
   margin-top: 60px;
@@ -539,30 +579,29 @@ body {
 .container__Test {
   width: 100%;
   height: auto;
-  display: flex;
-  flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap; }
+  display: flex;
+  flex-direction: row; }
+  .container__Test .test__card {
+    width: 280px;
+    margin: 30px;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px #17202A;
+    background-color: #CCD1D1;
+    font-size: 14px; }
 
-.test__cards {
-  width: 280px;
-  margin: 30px;
-  height: auto;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 0 20px #17202A;
-  background-color: #CCD1D1;
-  font-size: 14px; }
-  .test__cards .cards__título {
-    padding: 10px;
-    font-size: 18px;
-    color: #715C8C;
-    font-weight: bold;
-    position: relative;
-    font-family: "Original Surfer", cursive; }
-    .test__cards .cards__título .cards__body {
-      font-size: 14px;
-      color: #17202A; }
+.cards__título {
+  padding: 10px;
+  font-size: 18px;
+  color: #715C8C;
+  font-weight: bold;
+  position: hidden;
+  font-family: "Original Surfer", cursive; }
+  .cards__título .cards__body {
+    font-size: 14px;
+    color: #17202A; }
 
 .test__galería {
   width: 100%;
@@ -661,7 +700,7 @@ body {
     color: #3F8F8B;
     text-align: center;
     text-transform: uppercase;
-    position: relative;
+    position: hidden;
     margin-top: 60px;
     height: 50px;
     font-size: 28px;
@@ -675,35 +714,41 @@ body {
   color: #715C8C;
   font-family: "Original Surfer", cursive;
   margin-top: 60px;
-  font-size: 18px; }
+  font-size: 18px;
+  position: hidden; }
   .titulos__Contacto iframe {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    position: hidden; }
 
 .icono__correo {
   list-style-image: url(../Imagenes/Icono/correo.png);
   list-style-position: inside;
   text-align: left;
-  line-height: 1.6; }
+  line-height: 1.6;
+  position: hidden; }
 
 .icono__teléfono {
   list-style-image: url(../Imagenes/Icono/llamada-telefonica.png);
   list-style-position: inside;
   text-align: left;
-  line-height: 1.6; }
+  line-height: 1.6;
+  position: hidden; }
 
 .icono__ubicación {
   list-style-image: url(../Imagenes/Icono/ubicacion.png);
   list-style-position: inside;
   text-align: left;
-  line-height: 1.6; }
+  line-height: 1.6;
+  position: hidden; }
 
 .icono__horario {
   list-style-image: url(../Imagenes/Icono/paso-del-tiempo.png);
   list-style-position: inside;
   text-align: left;
-  line-height: 1.6; }
+  line-height: 1.6;
+  position: hidden; }
 
 .main__form {
-  position: relative;
+  position: hidden;
   margin-top: 60px;
   align-content: flex-end; }

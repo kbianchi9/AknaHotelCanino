@@ -4,82 +4,146 @@
     .header_logo{
         font-size: 20px;
     }
-    
+
+    /*Pag. Inicio*/
     .main__section{
         height: 100%;
         width: 100%;
+        
+        .section__image{
+            background-size: 150%;
+        }
     }
+
     .section__body{
         display: flex;
         place-items: center;
-        position: relative;
+        position: hidden;
         padding: 15px;
         text-align: center;
         
-        .body__título1, .body__título2{
-            font-size: 16px;
+        .body__título1{
+            font-size: 18px;
             animation:none;
         }   
     }  
 
-    .body__text, .texto__Nos{
+    .body__título2{
+        font-size: 16px;
+        animation: none;
+    }
+
+    .body__text{
         font-size: 14px;
     }
 
-    .contenedor__nos{
-        margin: auto;
-        width: auto;
-        padding: 15px;
-        height: 100vh;
-        position: hidden;
+    /*Pag. Nosotros*/
+    .main__nos{
+        height: 100%;
+        width: 150vh; 
 
         .nos__título{
             font-size: 16px;
         }
     }
+
+    .contenedor__nos{
+        display: flex;
+        justify-content: center;
+        position: hidden;
+
+    }
+    
+    .texto__Nos{
+        font-size: 14px;
+        text-align: center;
+    }
     
     #slide{
-        width: 100%;
-        height:fit-content;
-    }
-    
-    .serv__containerTabla{
         display: flex;
+        position: absolute;
+        justify-content: center;
+        align-content: center;
+        cursor: pointer;
+        width: 100%;
+        height:fit-content
+    }
+
+    /*Pag. Servicios*/
+    .main__serv, .serv__containerTabla{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        font-size: 14px;
         place-items: center;
         height: auto;
-        position: relative;
-        flex-direction: column;
-        flex-wrap: wrap;     
+        position: hidden;
+        flex-direction: column; 
+        width: 50%;    
     }
-    
+
+    .serv__título{
+        font-size: 16px;
+    }
+
     .table-header-image{
         display: none;
     }
 
+    /*Pag. Q&A*/
     .contenedor__QA{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         font-size: 14px;
+        
+        .QA__título{
+        font-size: 16px;
+        }
     }
 
-    .preg__Text, .font__Test, .titulos__Contacto{
-        font-size: 16px;
+    .secc__preg, .preg__título{
+        font-size: 14px;
     }
     
-    .secc__Contrato{
-        width: 90%;
-    }
-
-    iframe, .column {
+    
+    .secc__contrato{
         width: 100%;
+        justify-content: center;
+
+        .contrato__título{
+            font-size: 16px;
+            
+            p{
+            font-size: 14px;
+            }
+        }
+    }
+   
+
+    /*Pag. Testimonios*/
+
+    .test__título{
+        font-size: 16px;
     }
 
-    .forma__Imag{
+    .container__Test{
+        align-content: center;
+        justify-content: center;
+    }
+
+    .galeria__Contenedor{
+        width: 50%;
         grid-column: span 2;
         grid-row: span 2;
     }
 
+   
+    /*Pag. Contacto*/
+    iframe, .column {
+        width: 100%;
+    }
 
+    /*Footer*/
     .foot__style{
         display: flex;
         flex-direction: row;
@@ -107,11 +171,7 @@
             align-items: center;
         }
     }
-       
-    .container__cont{
-        width: 90%;
-    }
-    
+         
 }   
 
 /*Para dispositivos tipo tables y luego tamaño normal con pantallas más*/
@@ -214,11 +274,6 @@
 }   
 
 @media only screen and (min-width: 769px)and (max-width: 1200px){
-   /* header{
-        height: auto;
-        position: relative;
-    } */
-    
     .contenedor__Serv, .containerTabla{
         height: 80%;    
         width: 80%;
