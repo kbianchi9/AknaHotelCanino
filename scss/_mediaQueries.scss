@@ -39,19 +39,15 @@
 
     /*Pag. Nosotros*/
     .main__nos{
-        height: 100%;
-        width: 150vh; 
+        display: flex;
+        flex-direction: column;
+        column-count: 1;
+        flex-wrap: nowrap;
+        height: auto; 
 
         .nos__título{
             font-size: 16px;
         }
-    }
-
-    .contenedor__nos{
-        display: flex;
-        justify-content: center;
-        position: hidden;
-
     }
     
     .texto__Nos{
@@ -70,24 +66,30 @@
     }
 
     /*Pag. Servicios*/
-    .main__serv, .serv__containerTabla{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        font-size: 14px;
+    .main__ser{
+        height: auto;
+    }
+
+    .serv__containerTabla{
+        display: flex;
         place-items: center;
         height: auto;
-        position: hidden;
-        flex-direction: column; 
-        width: 50%;    
+        position: relative;
+        flex-direction: column;
+        flex-wrap: wrap;  
     }
 
     .serv__título{
         font-size: 16px;
+        
     }
 
     .table-header-image{
         display: none;
+    }
+
+    .table-item{
+        font-size: 12px;
     }
 
     /*Pag. Q&A*/
@@ -95,13 +97,9 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         font-size: 14px;
-        
-        .QA__título{
-        font-size: 16px;
-        }
     }
 
-    .secc__preg, .preg__título{
+    .preg__título{
         font-size: 14px;
     }
     
@@ -109,25 +107,29 @@
     .secc__contrato{
         width: 100%;
         justify-content: center;
+    }
 
-        .contrato__título{
-            font-size: 16px;
+    .contrato__título{
+        font-size: 16px;
             
-            p{
+        p{
             font-size: 14px;
-            }
         }
     }
-   
 
     /*Pag. Testimonios*/
-
-    .test__título{
-        font-size: 16px;
+    .main__Test{
+        width: 50%;
+        height: auto;
+        padding: 30px;
+        
+        .test__título{
+            font-size: 16px;
+        }
     }
 
     .container__Test{
-        align-content: center;
+        align-items: center;
         justify-content: center;
     }
 
@@ -135,10 +137,26 @@
         width: 50%;
         grid-column: span 2;
         grid-row: span 2;
+
+        .forma__Imag-Card, .forma__Imag{
+            grid-column: span 2;
+            grid-row: span 2;    
+        
+        }
     }
 
-   
+
     /*Pag. Contacto*/
+    .main__contac{
+        position: hidden;
+        width: 90%;
+
+        .contact__título{
+            font-size: 16px;
+
+        }
+    }
+
     iframe, .column {
         width: 100%;
     }
@@ -176,116 +194,214 @@
 
 /*Para dispositivos tipo tables y luego tamaño normal con pantallas más*/
 @media only screen and (min-width: 576px)and (max-width:768px){
-   /* header{
-        height: auto;
-        position: relative;
-    }
-
-    .logo{
-        font-size: 26px;
-    }
-
-    .titulo1, .titulo2, .titulos{
+    .header_logo{
         font-size: 22px;
-    }*/
+    }
 
-    body, p{
+    /*Pag. Inicio*/
+    .main__section{
+        height: 100%;
+        width: 100%;
+        
+        .section__image{
+            background-size: 130%;
+        }
+    }
+
+    .section__body{
+        display: flex;
+        place-items: center;
+        position: hidden;
+        padding: 15px;
+        text-align: center;
+        
+        .body__título1{
+            font-size: 20px;
+            animation:none;
+        }   
+    }  
+
+    .body__título2{
+        font-size: 18px;
+        animation: none;
+    }
+
+    .body__text{
         font-size: 16px;
     }
 
-    .background__Img{
-        display: flex;
-        place-items: center start;
-        background-size: 100%;
-        margin-left: 20px;
-        margin-right: 20px;
+    /*Pag. Nosotros*/
+    .main__nos{
+        height: 150vh;
+        width: 100%; 
+
+        .nos__título{
+            font-size: 18px;
+        }
     }
-   
-    .contenedor__Inicio{
-        display: flex;
-        place-items: center;
-        height: auto;
-        position: relative;
-    }  
-    .body__Inicio{
-        margin: auto;
-        width: auto;
-        padding: 15px;
-        height: auto;
-    }
-    
-    .main__Nos{
+
+    .contenedor__nos{
+        height: 150vh;
         display: flex;
         flex-direction: column;
-        column-count: 1;
-        flex-wrap: nowrap;
-        height: auto;
+        justify-content: center;
+        position: hidden;
+
     }
-   
+
+    .texto__Nos{
+        font-size: 16px;
+        text-align: center;
+    }
 
     #slide{
-        width: 100%;
-    }
-    
-    .contenedor__Serv, .containerTabla{
         display: flex;
+        position: absolute;
+        justify-content: center;
+        align-content: center;
+        cursor: pointer;
+        width: 100%;
+        height:fit-content
+    }
+
+    /*Pag. Servicios*/
+    .main__ser{
+        height: auto;
+    }
+
+    .serv__containerTabla{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        font-size: 12px;
         place-items: center;
         height: auto;
-        position: relative;
-        flex-direction: column;
-        flex-wrap: wrap;     
+        position: hidden;
+        flex-direction: column; 
+        width: 50%;    
+        flex-wrap: wrap; 
     }
-    
+
+    .serv__título{
+        font-size: 18px;
+        
+    }
+
     .table-header-image{
         display: none;
     }
 
+    .table-item{
+        font-size: 12px;
+    }
+
+    /*Pag. Q&A*/
     .contenedor__QA{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        font-size: 14px;
+        font-size: 16px;
     }
 
-    .preg__Text, .font__Test, .titulos__Contacto{
+    .preg__título{
         font-size: 18px;
     }
-    
-    .secc__Contrato{
+
+
+    .secc__contrato{
         width: 100%;
+        justify-content: center;
+    }
+
+    .contrato__título{
+        font-size: 18px;
+            
+        p{
+            font-size: 16px;
+        }
+    }
+
+    /*Pag. Testimonios*/
+    .main__Test{
+        width: 70%;
+        height: auto;
+        padding: 30px;
+        
+        .test__título{
+            font-size: 18px;
+        }
+    }
+
+    .container__Test{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .galeria__Contenedor{
+        width: 70%;
+        grid-column: span 3;
+        grid-row: span 3;
+
+        .forma__Imag-Card, .forma__Imag{
+            grid-column: span 2;
+            grid-row: span 2;    
+        
+        }
+    }
+
+    /*Pag. Contacto*/
+    .main__contac{
+        position: hidden;
+        width: 90%;
+
+        .contact__título{
+            font-size: 18px;
+
+        }
     }
 
     iframe, .column {
         width: 100%;
     }
 
-    .forma__Imag{
-        grid-column: span 3;
-        grid-row: span 3;
-
-    }
-
-    .page-footer, .foot__Text{
+    /*Footer*/
+    .foot__style{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-    }  
-}   
+        
+        .foot__text{
+            font-size: 12px;
+        }
+    }
+
+    .foot__redes{
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+                    
+        .icon-redes-footer{
+            font-size: 12px;
+            margin: 5px;
+            width: 15px;
+            height: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+
 
 @media only screen and (min-width: 769px)and (max-width: 1200px){
-    .contenedor__Serv, .containerTabla{
-        height: 80%;    
-        width: 80%;
+    .main__serv, .serv__containerTabla{
+        height: 70%;    
+        width: 70%;
     }
 
-    .contenedor__QA{
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        font-size: 14px;
-    }
-
-    .secc__Contrato{
+    .secc__contrato{
         width: 100%;
     }
 
@@ -295,13 +411,12 @@
 }   
 
 @media only screen and (min-width: 1200px){
-    header{
-        height: auto;
-        position: relative;
-    }    
-
-    .contenedor__Serv, .containerTabla{
-        height: 90%;    
+    section>div> .section__body{
+        margin-top: 800px;
+        width: 1200px;
+    }
+    .main__serv, .serv__containerTabla{
+        height: 80%;    
     }
 
     iframe, .column {
