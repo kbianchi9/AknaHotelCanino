@@ -410,11 +410,11 @@
     }
 }   
 
-@media only screen and (min-width: 1200px){
-    section>div> .section__body{
-        margin-top: 800px;
-        width: 1200px;
+@media only screen and (min-width: 1600px){
+    .section__body{
+        opacity: 0.6;
     }
+
     .main__serv, .serv__containerTabla{
         height: 80%;    
     }
