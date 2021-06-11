@@ -1,18 +1,26 @@
 {
   "name": "entrega-4",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/styles.scss css/estilos.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""   
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
-
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^6.0.0",
     "nodemon": "^2.0.7"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kbianchi9/AknaHotelCanino.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kbianchi9/AknaHotelCanino/issues"
+  },
+  "homepage": "https://github.com/kbianchi9/AknaHotelCanino#readme",
+  "description": ""
 }

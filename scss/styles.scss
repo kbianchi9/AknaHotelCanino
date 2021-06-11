@@ -20,7 +20,6 @@ header{
     background-color: $azul;
     height: auto;
     padding: 20px;
-    position: fixed;
 
     .header_logo{
         font-family: $f-family-titulos;
@@ -32,7 +31,7 @@ header{
 
 nav{
     font-size: $font-nav;
-    position: fixed;
+    background-color: $azul;
     
     ul{
         list-style: none;
@@ -70,6 +69,7 @@ body{
     font-size: $font-body;
     color: $negro;
     min-height: 100%;
+    z-index: 2;
 }
 
 /*Footer*/
@@ -121,6 +121,7 @@ body{
     width: 100%;
     height: 100%;
 
+
     .section__image{
         display: flex;
         background-image: url(../Imagenes/welcome.jpg);
@@ -134,7 +135,7 @@ body{
 .section__body{
     margin: auto;
     display: block;
-    margin-top: 530px;
+    margin-top: 500px;
     width: 960px;
     padding: 15px;
     height: auto;
@@ -192,7 +193,7 @@ body{
 .main__nos{
     width: 100%;
     height: 100%;
-    padding: 80px;
+    padding: 30px;
 
     .nos__título{
         font-size: $font-title;
@@ -251,7 +252,7 @@ body{
         text-align: center;
         text-transform: uppercase;
         position: hidden;
-        margin-top: ($margin-toppg*2);
+        margin-top: $margin-toppg;
         font-family: $f-family-titulos;
     }
 }
@@ -264,6 +265,7 @@ body{
     border-style: double;
     border-color: $gris;
     box-shadow: 0 0 20px $negro;
+    position: hidden; z-index: auto;
     
     display:grid;
     place-items: center;
@@ -292,7 +294,7 @@ body{
     position: top;
 
     .viñeta{
-        list-style-image: url(../Imagenes/Icono/pawprint.png);
+        list-style-image: url(../Imagenes/Icono/pawprint.jpg);
         list-style-position: inside;
         text-align: left;
         line-height: 1.6;
@@ -306,13 +308,14 @@ body{
     border-radius: 5%;
     filter: saturate(1.2);
     justify-content: center;
+    
 }
 
 .image1{
     background-image: url(../Imagenes/durmiendo.jpg);
     background-size: cover;
     background-position: center;
-    position: hidden;
+    position: relative;
 }
 
 .image2{
@@ -340,13 +343,13 @@ body{
 .main__QA{
     width: 100%;
     height: 100%;
-    padding: 80px;
+    padding: 30px;
 
     .contenedor__QA{
         margin: auto;
         height: auto;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
         grid-row: auto;
         line-height: 1.6;
         margin-top: $margin-toppg;
@@ -368,8 +371,7 @@ body{
 
 .secc__preg{
     display: inline-block;
-    padding: 10px;
-    margin-left: 30px;
+    padding: 30px;
             
     .preg__título{
         color:$azultitulo;
@@ -382,13 +384,13 @@ body{
   
 .secc__contrato{
     margin-top: $margin-toppg;
-    padding: 10%;
     height: auto; 
     text-align: center;
     background-color: $gris;
     border-style: double;
     border-color: $gris;
     background-color: $blanco;
+    padding: 30px;
 
     .contrato__título{
         color:$rosado;
@@ -412,7 +414,7 @@ body{
         text-align: center;
         text-transform: uppercase;
         position: hidden;
-        margin-top: ($margin-toppg*2);
+        margin-top: $margin-toppg;
         font-family: $f-family-titulos;
         margin-bottom: $margin-toppg;
     }
@@ -525,7 +527,7 @@ body{
 .main__contact{
     width: 100%;
     height: 100%;
-    padding: 70px;
+    padding: 40px;
     margin: auto;    
 
     .contact__título{
@@ -549,11 +551,11 @@ body{
     color: $rosado;
     font-family: $f-family-titulos;
     margin-top: $margin-toppg;
-    font-size: $font-nav;
+    font-size: 24px;
     position: hidden;
   
     iframe{
-        margin-bottom: 30px;
+        margin-bottom: $margin-toppg;
         position: hidden;
     }
 }
